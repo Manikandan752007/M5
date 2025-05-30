@@ -146,40 +146,24 @@ Write C program for the below pyramid string pattern. Enter a string: PROGRAM En
 ## PROGRAM:
 ```
 #include <stdio.h>
-#include <string.h>
-
 int main() {
     char str[100];
-    scanf("%s", str);
-
-    // printf("Enter number of rows: ");
-    // scanf("%d", &num_rows);
-
-    int len = strlen(str);
-    int sp = 10;
-    int k = 0;
-    int y = 0;
-
-    for (int i = 1; i <= len; i++) {
-        for (int space = 1; space <= sp; space++) {
+    printf("Enter the string: ");
+    scanf("%s",str);
+    int r, si=0;
+    printf("\n\nEnter the number of rows: ");
+    scanf("%d",&r);
+    for(int i=0;i<r+1;i++){
+        for(int j=0;j<r-i;j++){
             printf(" ");
         }
-
-        for (int j = 0; j <= y; j++) {
-            printf("%c", str[k]);
-            k++;
-
-            if (str[k] == '\0') {
-                k = 0;
-            }
+        for(int j=0;j<=i;j++){
+            printf("%c ",str[si++]);
+            if(str[si]=='\0')si=0;
         }
-
-        printf("\n");
-        sp -= 1;
-        y += 2;
+      printf("\n");  
     }
-
-    return 0;
+    
 }
 
 ```
@@ -187,9 +171,10 @@ int main() {
 
 
  ## OUTPUT
-![image](https://github.com/user-attachments/assets/7a9808f9-a44f-454f-b7b2-d9aff466f9a0)
 
 
+
+![image](https://github.com/user-attachments/assets/dcfcdd8c-69fe-46f4-b6cf-f4ae181bbb4c)
 
  
 
